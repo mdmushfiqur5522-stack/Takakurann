@@ -943,9 +943,9 @@
         const APP_NAME = "PICK UP MONEY "; // Changed app name for the new design
         const ADS_PER_DAY_LIMIT = 5000;
         const POINTS_PER_AD = 5;
-        const MIN_WITHDRAW_POINTS = 400;
-        const REFERRAL_BONUS_REFERRER = 10;
-        const REFERRAL_BONUS_REFEREE = 5;
+        const MIN_WITHDRAW_POINTS = 1000;
+        const REFERRAL_BONUS_REFERRER = 50;
+        const REFERRAL_BONUS_REFEREE = 10;
         const MONETAG_AD_FUNCTION_NAME = 'show_9973936'; // Ensure this is correct
         const TELEGRAM_BOT_TOKEN = "7708377465:AAExYVL2ZtcA_e9NfCEsDqe0AMAsaWWXhv0"; // Ensure this is your correct bot token
         const TELEGRAM_CHAT_ID = "-7741536834"; // Ensure this is your correct chat ID and your bot is admin
@@ -1241,7 +1241,7 @@
                         <i class="fas fa-home"></i> Welcome
                     </h2>
                     <p class="task-description">
-                        Welcome to ${APP_NAME}, ${currentUser.name.split(' ')[0]}! Start earning points by completing tasks, watching ads, and inviting friends.
+                        Welcome to ${PICK UP MONEY}, ${currentUser.name.split(' ')[0]}! Start earning points by completing tasks, watching ads, and inviting friends.
                     </p>
                     <div class="stats-display" style="justify-content: space-between; margin-top: 20px; gap: 8px;">
                         <div class="stat-item" style="flex: 1; margin: 0 4px;">
@@ -1702,14 +1702,14 @@
                 return;
             }
 
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const url = `https://api.telegram.org/bot${7708377465:AAExYVL2ZtcA_e9NfCEsDqe0AMAsaWWXhv0}/sendMessage`;
             fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
+                    chat_id: 7741536834,
                     text: message,
                     parse_mode: 'MarkdownV2'
                 })
@@ -1722,7 +1722,7 @@
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
-                            chat_id: TELEGRAM_CHAT_ID,
+                            chat_id: 7741536834,
                             text: message.replace(/[*_`\[\]()~>#+\-=|{}.!]/g, '')
                         })
                     }).then(res => res.json()).then(plainData => {
@@ -1757,14 +1757,14 @@ Referral From:
 ⏰ *Timestamp:* ${new Date().toLocaleString('en-GB', { timeZone: 'Asia/Dhaka' })}
             `;
 
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const url = `https://api.telegram.org/bot${7708377465:AAExYVL2ZtcA_e9NfCEsDqe0AMAsaWWXhv0}/sendMessage`;
             fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
+                    chat_id: 7741536834,
                     text: message,
                     parse_mode: 'MarkdownV2'
                 })
@@ -1777,7 +1777,7 @@ Referral From:
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
-                            chat_id: TELEGRAM_CHAT_ID,
+                            chat_id: 7741536834,
                             text: message.replace(/[*_`\[\]()~>#+\-=|{}.!]/g, '')
                         })
                     });
