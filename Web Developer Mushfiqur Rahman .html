@@ -1709,7 +1709,7 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    chat_id: 7741536834,
+                    chat_id: TELEGRAM_CHAT_ID,
                     text: message,
                     parse_mode: 'MarkdownV2'
                 })
@@ -1722,7 +1722,7 @@
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
-                            chat_id: 7741536834,
+                            chat_id: TELEGRAM_CHAT_ID,
                             text: message.replace(/[*_`\[\]()~>#+\-=|{}.!]/g, '')
                         })
                     }).then(res => res.json()).then(plainData => {
@@ -1764,7 +1764,7 @@ Referral From:
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    chat_id: 7741536834,
+                    chat_id: TELEGRAM_CHAT_ID,
                     text: message,
                     parse_mode: 'MarkdownV2'
                 })
@@ -1777,7 +1777,7 @@ Referral From:
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
-                            chat_id: 7741536834,
+                            chat_id: TELEGRAM_CHAT_ID,
                             text: message.replace(/[*_`\[\]()~>#+\-=|{}.!]/g, '')
                         })
                     });
