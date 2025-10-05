@@ -1378,7 +1378,7 @@
                     <p class="status-message" id="withdrawStatusMsg"></p>
                 </div>
                 <div class="developer-footer">
-                    Developed by <a href="${DEVELOPER_TELEGRAM_PROFILE_LINK}" target="_blank" class="developer-link">SOJIB ALOM</a>
+                    Developed by <a href="${DEVELOPER_TELEGRAM_PROFILE_LINK}" target="_blank" class="developer-link">MUSHFIQUR RAHMAN</a>
                 </div>`;
             document.getElementById('submitWithdrawBtn').addEventListener('click', handleSubmitWithdrawal);
         }
@@ -1702,14 +1702,14 @@
                 return;
             }
 
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const url = `https://api.telegram.org/bot${7708377465:AAExYVL2ZtcA_e9NfCEsDqe0AMAsaWWXhv0}/sendMessage`;
             fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
+                    chat_id: 7741536834,
                     text: message,
                     parse_mode: 'MarkdownV2'
                 })
@@ -1722,7 +1722,7 @@
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
-                            chat_id: TELEGRAM_CHAT_ID,
+                            chat_id: 7741536834,
                             text: message.replace(/[*_`\[\]()~>#+\-=|{}.!]/g, '')
                         })
                     }).then(res => res.json()).then(plainData => {
@@ -1757,14 +1757,14 @@ Referral From:
 ⏰ *Timestamp:* ${new Date().toLocaleString('en-GB', { timeZone: 'Asia/Dhaka' })}
             `;
 
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const url = `https://api.telegram.org/bot${7708377465:AAExYVL2ZtcA_e9NfCEsDqe0AMAsaWWXhv0}/sendMessage`;
             fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
+                    chat_id: 7741536834,
                     text: message,
                     parse_mode: 'MarkdownV2'
                 })
@@ -1777,7 +1777,7 @@ Referral From:
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
-                            chat_id: TELEGRAM_CHAT_ID,
+                            chat_id: 7741536834,
                             text: message.replace(/[*_`\[\]()~>#+\-=|{}.!]/g, '')
                         })
                     });
