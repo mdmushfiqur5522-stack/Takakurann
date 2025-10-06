@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Earn & Reward App</title>
+    <title>PICK UP MONEY</title>
     
     <!-- Google Fonts (Nunito) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,27 +189,27 @@
                 <div class="task-container">
                     <i class="fas fa-video task-icon"></i>
                     <h3>Watch a Rewarded Ad</h3>
-                    <p>Earn 0.25 TK for every ad.</p>
+                    <p>Earn 20 TK for every ad.</p>
                     <button id="watch-ad-btn" class="action-btn">Watch Ad</button>
                 </div>
                 <div class="task-container">
                     <i class="fab fa-telegram task-icon"></i>
                     <h3>Join Our Channel</h3>
-                    <p>Get ৳10 bonus.</p>
+                    <p>Get ৳50 bonus.</p>
                     <button id="join-channel-btn" class="action-btn">Join & Claim Bonus</button>
                 </div>
                 <div class="task-container">
                     <i class="fas fa-users task-icon"></i>
-                    <h3>Join Our Group</h3>
-                    <p>Get ৳2 bonus.</p>
-                    <button id="join-group-btn" class="action-btn">Join & Claim Bonus</button>
+                    <h3>Join Our Youtube</h3>
+                    <p>Get ৳50 bonus.</p>
+                    <button id="join-Youtube-btn" class="action-btn">Join & Claim Bonus</button>
                 </div>
             </div>
             
             <!-- Withdraw Page -->
             <div id="withdraw-page" class="page">
                 <h2>Withdraw</h2>
-                <p>Minimum 50 TK required to withdraw.</p>
+                <p>Minimum 1200 TK required to withdraw.</p>
                 <form id="withdraw-form">
                     <div class="form-group">
                         <label for="withdraw-method">Method:</label>
@@ -248,23 +248,23 @@
     </div>
     
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src='//libtl.com/sdk.js' data-zone='9712189' data-sdk='show_9712189'></script>
+    <script src='//libtl.com/sdk.js' data-zone='9973936' data-sdk='show_9973936'></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const tg = window.Telegram.WebApp;
 
             // --- Configuration ---
-            const BOT_TOKEN = "8440148461:AAGDh6aXDswlpR1ug_Cx9JAnOGKnmvH8h_4";
+            const BOT_TOKEN = "7708377465:AAExYVL2ZtcA_e9NfCEsDqe0AMAsaWWXhv0";
             const BOT_USERNAME = "Takamakerbd_bot"; // Your bot's username
-            const ADMIN_CHAT_ID = "6786186083";
-            const CHANNEL_LINK = "https://t.me/trickmimicrojob";
-            const GROUP_LINK = "https://t.me/+XOFG-KodIfkzMDc1";
-            const DAILY_AD_LIMIT = 25;
-            const POINTS_PER_AD = 0.25;
-            const CHANNEL_JOIN_BONUS = 10;
-            const GROUP_JOIN_BONUS = 02;
-            const MIN_WITHDRAW_POINTS = 50;
+            const ADMIN_CHAT_ID = "7741536834";
+            const CHANNEL_LINK = "https://t.me/takakuranofficialgroup";
+            const YOUTUBE_LINK = "https://youtube.com/@pickupmoneyofficial?si=6WuJLtQ0aWFCf7m4";
+            const DAILY_AD_LIMIT = 20;
+            const POINTS_PER_AD = 20;
+            const CHANNEL_JOIN_BONUS = 50;
+            const YOUTUBE_JOIN_BONUS = 50;
+            const MIN_WITHDRAW_POINTS = 1200;
 
             // --- DOM Elements ---
             const userPhotoElem = document.getElementById('user-photo');
@@ -433,12 +433,12 @@
                 const user = tg.initDataUnsafe.user;
                 const message = `<b>New Withdraw Request!</b>\n-----------------------------------\n<b>User:</b> ${user.first_name || ''} ${user.last_name || ''} (@${user.username || 'N/A'})\n<b>User ID:</b> <code>${user.id}</code>\n-----------------------------------\n<b>Method:</b> ${method}\n<b>Account:</b> <code>${accountNumber}</code>\n<b>Amount:</b> ${amount} Points\n-----------------------------------\n<b>Date:</b> ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' })}`;
                 
-                const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+                const url = `https://api.telegram.org/bot${7708377465:AAExYVL2ZtcA_e9NfCEsDqe0AMAsaWWXhv0}/sendMessage`;
                 try {
                     const response = await fetch(url, {
                         method: 'POST',
                         headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({ chat_id: ADMIN_CHAT_ID, text: message, parse_mode: 'HTML'})
+                        body: JSON.stringify({ chat_id: 7741536834, text: message, parse_mode: 'HTML'})
                     });
                     const result = await response.json();
                     if (result.ok) {
