@@ -433,12 +433,12 @@
                 const user = tg.initDataUnsafe.user;
                 const message = `<b>New Withdraw Request!</b>\n-----------------------------------\n<b>User:</b> ${user.first_name || ''} ${user.last_name || ''} (@${user.username || 'N/A'})\n<b>User ID:</b> <code>${user.id}</code>\n-----------------------------------\n<b>Method:</b> ${method}\n<b>Account:</b> <code>${accountNumber}</code>\n<b>Amount:</b> ${amount} Points\n-----------------------------------\n<b>Date:</b> ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' })}`;
                 
-                const url = `https://api.telegram.org/bot${7708377465:AAExYVL2ZtcA_e9NfCEsDqe0AMAsaWWXhv0}/sendMessage`;
+                const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
                 try {
                     const response = await fetch(url, {
                         method: 'POST',
                         headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({ chat_id: 7741536834, text: message, parse_mode: 'HTML'})
+                        body: JSON.stringify({ chat_id: ADMIN_CHAT_ID, text: message, parse_mode: 'HTML'})
                     });
                     const result = await response.json();
                     if (result.ok) {
